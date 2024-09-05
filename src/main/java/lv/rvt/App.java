@@ -10,16 +10,6 @@ public class App
 
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Ievadi savu vardu:");
-
-        scanner.nextLine();
-
-        String name = scanner.nextLine();
-        int age = 17;
-        boolean isOnline = false;
-
-        System.out.println("Sveiks " + name);
-        
 
     }
 
