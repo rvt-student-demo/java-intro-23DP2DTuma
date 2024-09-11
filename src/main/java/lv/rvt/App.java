@@ -1,40 +1,26 @@
 package lv.rvt;
 
-
-
+import java.util.*;
 
 public class App 
 {
 
-    public static void main(String[] args) 
+    public static void main( String[] args ) 
     {
-        int chicken = 3;
-        double bacon = 5.5;
-        String tracktor = "None!";
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Chicken:");
-        System.out.println(3);
-        System.out.println("Bacon(kg):");
-        System.out.println(5.5);
-        System.out.println("Tractor:");
-        System.out.println(tracktor);
-        System.out.println(" ");
-        System.out.println("And finally, a summary:");
-        System.out.println(3);
-        System.out.println(5.5);
-        System.out.println(tracktor);
-
-
-
-
-
-
-
-
+        System.out.println("Ievadi savu vārdu:");
         
+        String name = scanner.nextLine();
 
+        System.out.println("Ievadi savu Uzvārdu:");
 
+        String lastname = scanner.nextLine();
 
+        System.out.println("Ievadi savu gruppu:");
+        String group = scanner.nextLine();
+
+        System.out.println("Students: " + name + " " + lastname + "," + " grupa: " + group );
 
     }
 }
