@@ -19,5 +19,15 @@ public class App
         System.out.println(first + " * " + second + " = " + (first * second));
         System.out.println(first + " / " + second + " = " + (double) (first / second));
 
+        System.out.println("Uzraksti savu vārdu: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Uzraksti savu Uzvārdu: ");
+        String username = scanner.nextLine();
+      
+        System.out.println("Uzraksti savu grupu: ");
+        String group = scanner.nextLine();
+
+        System.out.println(name + " " + username + " " + group + " ");
     }
 }
