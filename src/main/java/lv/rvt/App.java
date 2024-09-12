@@ -7,27 +7,11 @@ public class App
 
     public static void main( String[] args ) 
     {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Give the first number:");
-        int first = Integer.valueOf(scanner.nextLine());
-        System.out.println("Give the second number:");
-        int second = Integer.valueOf(scanner.nextLine());
-        
-        System.out.println(first + " + " + second + " = " + (first + second));
-        System.out.println(first + " - " + second + " = " + (first - second));
-        System.out.println(first + " * " + second + " = " + (first * second));
-        System.out.println(first + " / " + second + " = " + (double) (first / second));
-
-        System.out.println("Uzraksti savu vārdu: ");
-        String name = scanner.nextLine();
-
-        System.out.println("Uzraksti savu Uzvārdu: ");
-        String username = scanner.nextLine();
-      
-        System.out.println("Uzraksti savu grupu: ");
-        String group = scanner.nextLine();
-
-        System.out.println(name + " " + username + " " + group + " ");
+        int speed = 130;
+        System.out.println("Give speed:");
+        System.out.println(speed);
+        if (speed > 120) {
+            System.out.println("Sods 50 $");
+        }
     }
 }
