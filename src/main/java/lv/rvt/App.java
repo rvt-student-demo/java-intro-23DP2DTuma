@@ -9,18 +9,41 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadi savu vārdu:");
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scanner.nextLine());
+
+
+        System.out.println(first + " + " + second + " = " + (first + second));
+
         
-        String name = scanner.nextLine();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //int number = 23;
 
-        System.out.println("Ievadi savu Uzvārdu:");
+        //int inputAsInt = Integer.valueOf(scanner.nextLine());
 
-        String lastname = scanner.nextLine();
+        //double inputAsDouble = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ievadi savu gruppu:");
-        String group = scanner.nextLine();
+        //boolean inputAsBoool = Boolean.valueOf(scanner.nextLine());
 
-        System.out.println("Students: " + name + " " + lastname + "," + " grupa: " + group );
+        //System.out.println(inputAsInt);
+        //System.out.println(inputAsDouble);
+        //System.out.println(inputAsBoool);
 
     }
 }
