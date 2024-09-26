@@ -7,9 +7,9 @@ public class App
 
     public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
-        int start = Integer.valueOf(scanner.nextLine());
-        int end = 101;
-        for (int i = start; i < end; i++) {
+        int sakums = Integer.valueOf(scanner.nextLine());
+        int beigas = 101;
+        for (int i = sakums; i < beigas; i++) {
             System.out.println(i);
 }
     }
