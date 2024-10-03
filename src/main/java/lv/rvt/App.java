@@ -28,12 +28,12 @@ public class App
             
             if (number % 2 == 0) {
                 evenNumbers++;
-                continue;
+                
             }
 
             if (number % 2 != 0) {
                 oddNumbers++;
-                continue;
+                
             }
 
             
