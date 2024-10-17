@@ -1,41 +1,50 @@
 package lv.rvt;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
 
 public class App 
 {
     public static void main(String[] args) {
 
+        Random rand = new Random();
+        int numberToGuess = rand.nextInt(10) + 1;
         Scanner scanner = new Scanner(System.in);
+        int guess;
+        int sum = 0;
         
-        ArrayList<Integer> numbers = new ArrayList<>();
-        
+        System.out.println("Guess a number between 1 and 10:");
+        System.out.println("You must guess what it is in three tries.");
+        System.out.println("Enter a guess:");
+
         while (true) {
-        
-        int number = Integer.valueOf(scanner.nextLine());
-        
-        if (number == 0) {
-        
-        break;
-        
-        }
-        
-        numbers.add(number);
+            guess = scanner.nextInt();
+
+            if (guess == numberToGuess) {
+                System.out.println("Right! \n" + "you have won the game.");
+                break;
+            } 
+            else if (guess > numberToGuess) {
+                    System.out.println("wrong");
+                    sum += 1;
+            }
+            else {
+                System.out.println("wrong");
+                sum += 1;
+            }
+            
+            if (sum == 3){
+            
+            System.out.println("The correct number was " + numberToGuess);
+            System.out.println("You have lost the game. ");
+            }
+
     }
-        int total_sum = 0;
-        for (int sum : numbers){
-        total_sum += sum;
-        }
-        
-        
-        System.out.println(numbers.get(1) + numbers.get(2));
-        System.out.println(total_sum);
-        }
-        
-        }
+    scanner.close();
 
+}
 
-
+}
 
     
 
