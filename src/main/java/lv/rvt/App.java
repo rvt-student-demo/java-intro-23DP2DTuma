@@ -13,7 +13,7 @@ public class App
         int guess;
         int sum = 0;
         
-        System.out.println("Guess a number between 1 and 10:");
+        System.out.println("I am thinking of a number from 1 to 10.");
         System.out.println("You must guess what it is in three tries.");
         System.out.println("Enter a guess:");
 
