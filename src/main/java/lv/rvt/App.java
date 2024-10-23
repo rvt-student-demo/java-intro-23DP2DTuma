@@ -24,10 +24,6 @@ public class App
                 System.out.println("Right! \n" + "you have won the game.");
                 break;
             } 
-            else if (guess > numberToGuess) {
-                    System.out.println("wrong");
-                    sum += 1;
-            }
             else {
                 System.out.println("wrong");
                 sum += 1;
@@ -40,7 +36,6 @@ public class App
             }
 
     }
-    scanner.close();
 
 }
 
