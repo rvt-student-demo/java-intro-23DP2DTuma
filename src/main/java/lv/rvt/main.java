@@ -20,7 +20,7 @@ public class main {
         
         System.out.println("Enter numbers:");
 
-        Statistics statistics1 = new Statistics();
+        Statistics statistics2 = new Statistics();
         Statistics even = new Statistics();
         Statistics odd = new Statistics();
 
@@ -32,7 +32,7 @@ public class main {
                 break;
             }
 
-            statistics.addNumber(input);
+            statistics2.addNumber(input);
             
             if (input % 2 == 0) {
                 even.addNumber(input);
@@ -40,10 +40,8 @@ public class main {
             else {
                 odd.addNumber(input);
             }
-            
         }
-
-        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Sum: " + statistics2.sum());
         System.out.println("Sum of even numbers: " + even.sum());
         System.out.println("Sum of odd numbers: " + odd.sum());
     }
