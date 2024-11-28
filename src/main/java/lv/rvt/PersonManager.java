@@ -1,10 +1,12 @@
 package lv.rvt;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class main {
-    public static void main(String[] args) {
+public class PersonManager {
+     public static void main(String[] args) {
         ArrayList<Person> personas = new ArrayList<>();
 
         // Read the CSV file
@@ -36,13 +38,8 @@ public class main {
             }
             double averageAge = totalAge / personas.size();
             System.out.println("Average Age: " + averageAge);
+            
         }
     }
 }
-
-
-
-    
-
-
 
