@@ -1,39 +1,30 @@
 package lv.rvt;
+import java.util.*;
+import java.io.*;
+import java.nio.file.StandardOpenOption;
 
 public class PaymentCard {
+ 
     private double balance;
-
-    public PaymentCard(double openingBalance) {
-        this.balance = openingBalance;
+ 
+    public PaymentCard(double balance) {
+        this.balance = balance;
     }
-    public void eatAffordably() {
-        if (this.balance >= 2.60) {
-            this.balance = this.balance - 2.60;
-
-        }
+ 
+    public double balance() {
+        return this.balance;
     }
-
-    public void eatHeartily() {
-        if (this.balance >= 4.60) {
-            this.balance = this.balance - 4.60;
-        }
+ 
+    public void addMoney(double increase) {
+        this.balance += increase;
     }
-    public void addMoney(double amount) {
-        double sum = this.balance + amount;
-        
-        if (sum <= 150) {  
-            this.balance = this.balance + amount;
-        } else {
-            this.balance = 150;
+ 
+    public boolean takeMoney(double amount) {
+        if (this.balance >= amount) {
+            this.balance = this.balance - amount;
+            return true;
         }
-        if (amount <= 0) {
-            this.balance = this.balance + 0;
-        }
-   
-  
+        return false;
     }
 
-    public String toString() {
-       return "The card has a balance of " + this.balance + " euros";
-    }
 }
