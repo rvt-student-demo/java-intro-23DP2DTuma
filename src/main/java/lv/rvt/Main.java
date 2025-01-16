@@ -1,24 +1,20 @@
 package lv.rvt;
-import java.util.Objects;
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        // you can write code here to try out your program
-        SimpleDate date = new SimpleDate(24, 3, 2017);
-        SimpleDate date2 = new SimpleDate(23, 7, 2017);
+        // write your test code here
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-        Person leo = new Person("Leo", date, 62, 9);
-        Person lily = new Person("Lily", date2, 65, 8);
+        printPersons(persons);
+    }
 
-        if (leo.equals(lily)) {
-            System.out.println("Is this quite correct?");
-        }
-
-        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
-
-        if (leo.equals(leoWithDifferentWeight)) {
-            System.out.println("Is this quite correct?");
+    public static void printPersons (ArrayList<Person> persons) {
+        for (Person person : persons) {
+            System.out.println(person);
         }
     }
 }
