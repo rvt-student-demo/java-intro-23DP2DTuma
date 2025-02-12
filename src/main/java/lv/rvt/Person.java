@@ -1,17 +1,33 @@
 package lv.rvt;
 
-public class Person {
-    private String name;
-    private String adress;
+abstract class Person {
+    // Abstract method to calculate salary
+    public abstract double calculateSalary();
+}
 
-    public Person (String name, String adress) {
-        this.name = name;
-        this.adress = adress;
+// Student class extending Person
+class Student extends Person {
+    @Override
+    public double calculateSalary() {
+        // Assuming students earn a stipend
+        return 1000.0; // Example stipend amount
+    }
+}
+
+// Teacher class extending Person
+class Teacher extends Person {
+    private double baseSalary;
+    private double bonus;
+
+    // Constructor
+    public Teacher(double baseSalary, double bonus) {
+        this.baseSalary = baseSalary;
+        this.bonus = bonus;
     }
 
     @Override
-    public String toString () {
-        return this.name + "\n  " + this.adress;
+    public double calculateSalary() {
+        return baseSalary + bonus;
     }
 }
 
