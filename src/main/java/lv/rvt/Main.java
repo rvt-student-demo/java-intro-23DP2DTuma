@@ -5,9 +5,8 @@ import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) throws Exception {
-    Console console = System.console();
-
-    console.readLine();
+    PersonManager manager = new PersonManager();
+    manager.run();
   }
 }
 
