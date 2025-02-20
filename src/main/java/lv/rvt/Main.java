@@ -1,16 +1,18 @@
 package lv.rvt;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
-  public static void main(String[] args) {
-      Person student = new Student();
-      Person teacher = new Teacher(5000.0, 1000.0);
+  public static void main(String[] args) throws Exception {
 
-      System.out.println("Student Salary: $" + student.calculateSalary());
-      System.out.println("Teacher Salary: $" + teacher.calculateSalary());
+    ArrayList <Person> personList = new Main();
+
+    personList.add(new Person("John","Riga"));
+    personList.add(new Person("John","Riga"));
+    personList.add(new Person("John","Riga"));
+    personList.add(new Person("John","Riga"));
   }
 }
-
 
 
     
