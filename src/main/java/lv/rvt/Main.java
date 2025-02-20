@@ -1,16 +1,13 @@
 package lv.rvt;
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) throws Exception {
+    Console console = System.console();
 
-    ArrayList <Person> personList = new Main();
-
-    personList.add(new Person("John","Riga"));
-    personList.add(new Person("John","Riga"));
-    personList.add(new Person("John","Riga"));
-    personList.add(new Person("John","Riga"));
+    console.readLine();
   }
 }
 

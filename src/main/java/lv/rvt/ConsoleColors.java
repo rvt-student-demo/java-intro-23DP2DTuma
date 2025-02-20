@@ -1,5 +1,5 @@
 
-package lv.rvt.tools;
+package lv.rvt;
 
 public class ConsoleColors {
     // Reset

@@ -1,45 +1,51 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class PersonManager {
-     public static void main(String[] args) {
-        ArrayList<Person> personas = new ArrayList<>();
 
-        // Read the CSV file
-        try (BufferedReader reader = new BufferedReader(new FileReader("personas.csv"))) {
-            String line;
-            reader.readLine(); // Skip the header line
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                String name = parts[0];
-                int age = Integer.parseInt(parts[1].trim());
-                double weight = Double.parseDouble(parts[2].trim());
-                double height = Double.parseDouble(parts[3].trim());
-                personas.add(new Person(name, age, weight, height));
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading file: " + e.getMessage());
+    public static ArrayList<Person> getPersonList() throws Exception {
+        BufferedReader reader = Helper.getReader("persons.csv");
+
+        ArrayList<Person> personList = new ArrayList<>();
+        String line;
+
+        reader.readLine(); // Ignorējam titul rindiņu        
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(", ");
+
+            String name = parts[0];
+            int age = Integer.valueOf(parts[1]);
+            int weight = Integer.valueOf(parts[2]);
+            int height = Integer.valueOf(parts[3]);
+            String address = parts[4];
+
+            Person person = new Person(name, age, weight, height, address);
+            personList.add(person);
         }
+        return personList;
+    }
 
-        // Print all persons
-        for (Person person : personas) {
-            System.out.println(person);
-        }
+    public static void showPersonList() throws Exception{
+        ArrayList<Person> personList = new ArrayList<>();
+        System.out.println("name, age, weight, height, address");
+        personList = PersonManager.getPersonList();
 
-        // Calculate and print the average age
-        if (!personas.isEmpty()) {
-            double totalAge = 0;
-            for (Person person : personas) {
-                totalAge += person.age;
-            }
-            double averageAge = totalAge / personas.size();
-            System.out.println("Average Age: " + averageAge);
-            
+        for (int i = 0; i < personList.size(); i++) {
+            System.out.println(personList.get(i));
         }
     }
-}
 
+    public static void addPerson(Person person) throws Exception {
+        BufferedWriter writer = 
+        Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+
+        writer.write(person.toCsvRow());
+        writer.newLine();
+        writer.close();
+    }
+
+}
