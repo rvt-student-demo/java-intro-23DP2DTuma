@@ -8,9 +8,10 @@ import java.util.ArrayList;
 public class PersonManager {
 
     public void run() throws Exception {
-        
-        
+
     }
+
+
 
     public static void showPersonList() throws Exception {
         ArrayList<Person> personList = new ArrayList<>();
@@ -55,3 +56,4 @@ public class PersonManager {
     }
      
 }
+
