@@ -1,4 +1,6 @@
-name,age,weight,height
-John Doe,28,70,175
-Jane Smith,32,65,160
-Alice Brown,25,55,168
+name,age,weight,height,address
+John Doe,28,70,175,123 Main St
+Jane Smith,32,65,160,456 Oak Ave
+Alice Brown,25,55,168,789 Pine Rd
+Michael Johnson,40,80,180,101 Maple Dr
+Emily Davis,22,50,165,202 Birch Ln
